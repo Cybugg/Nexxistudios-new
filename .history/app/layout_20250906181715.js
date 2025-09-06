@@ -42,7 +42,7 @@ export const metadata = {
   },
   twitter: { 
     card: "summary_large_image",
-    title: "Nexxi Studios: Bye to All Mid Websites and Softwares",
+    title: "Nexxi Studios:Bye to All Mid Websites and Softwares",
     description: "We are a future-focused software development and creative web agency, specializing in custom software solutions, modern website design, SEO optimization, and website redesigns. Our team partners with top designers and developers to build innovative digital platforms, rescue outdated websites, and help brands grow online",
     images: ["/logo.png"],
   },
