@@ -14,7 +14,7 @@ function TopNav() {
     
       <Link href="https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business" target="_blank"
       rel="noopener noreferrer" className="py-3 px-5 text-xl z-80 rounded-full border cursor-pointer flex gap-2 items-center">
-<FaWhatsapp className='text-2xl' /> <span className='hidden md:block'>Chat on Whatsapp</span>
+<FaWhatsapp className='text-2xl' /> <spaChat on Whatsapp
       </Link> 
   
   </div>
