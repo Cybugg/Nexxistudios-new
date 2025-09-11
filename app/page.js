@@ -21,8 +21,8 @@ export default function Home() {
   },);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] min-h-screen p-3 px-5  sm:p-5 bg-white text-black font-clashGrotesk">
-      <main className="flex flex-col  row-start-2 items-center mx-auto container" >
+    <div className="grid grid-rows-[20px_1fr_20px] min-h-screen px-5 p-2 md:px-0 bg-white text-black font-normal font-clashGrotesk">
+      <main className="flex flex-col  row-start-2 items-center  mx-[120px]" >
   <TopNav />
     <Hero />
       </main>

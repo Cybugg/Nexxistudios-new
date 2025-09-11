@@ -13,6 +13,11 @@ const clashGrotesk = localFont({
   variable:"--font-clashGrotesk",
   style:"normal"
 })
+const clashGroteskLight = localFont({
+  src:"../public/fonts/OTF/ClashGrotesk-Light.otf",
+  variable:"--font-clashGrotesk-Light",
+  style:"light"
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -53,7 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative ${clashGrotesk.variable} `}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative ${clashGrotesk.variable} ${clashGroteskLight.variable}`}>
             <div className="absolute w-full h-screen">
               <Particles particleColors={['#000000', '#000000']}
     particleCount={300}
