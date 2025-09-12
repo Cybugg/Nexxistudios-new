@@ -1,11 +1,14 @@
 "use client"
-import React from 'react'
+import React, {useRef} from 'react'
 import gsap from "gsap"
+import { ScrollTrigger } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 
 
-function Page() {
+gsap.registerPlugin(ScrollTrigger);
 
+function Page() {
+  const scrollRef = useRef();
   const tl = gsap.timeline({
     repeat:-1,repeatDelay:1, yoyo:true
   })
@@ -65,15 +68,50 @@ useGSAP(
 
       gsap.to(
 ".stagger-box",{
-  y:"500px",
-  repeat:-1
+  y:"-500px",
+  repeat:-1,
+  duration:1,
+  ease:"sine.inOut",
+  stagger:{
+    amount:0.5,
+  }
 }
-      )
+)
+
+gsap.to("#scroll-orange",{
+  x:"500px",
+  scrollTrigger:{
+    trigger:"#scroll-orange",
+    scrub:true,
+          start:"bottom bottom",
+          end:"top 20%"
+  }
+})
+
+ const boxes = gsap.utils.toArray(scrollRef.current.children);
+
+ boxes.forEach(
+  (box) =>{
+    gsap.to(box, {
+        x:50,
+        rotation:360,
+        repeat:-1,
+        borderRadius:"100%",
+        scale:2,
+        scrollTrigger:{
+          trigger:box,
+          
+        }
+      }
+    )
+  }
+ )
   },[]
 )
 
   return (
-    <div className='flex flex-col text-black bg-white min-h-screen p-5'>
+    <div>
+     <div className='flex flex-col text-black bg-white min-h-screen p-5'>
 
     <h1 className='text-black text-4xl font-clashGrotesk text-center p-5'>GSAP Animations Fundamenatals</h1>
 {/* to */}
@@ -157,7 +195,29 @@ useGSAP(
 
         </div>
         </div>
+
+        {/* Scroll Trigger */}
+        <h2 className=' text-2xl font-bold '>GSAP Scroll Trigger</h2>
+    <p className='text-xl'>{"The GSAP scroll trigger is a plugin that allows you to create animations that are triggered by the scroll position of the page."}</p>
+  
+{/* Animation container */}
+       <div className='w-full flex flex-col items-center justify-center py-12 min-h-screen'>
+{/* Box: aniamtion items */}
+        <div id='scroll-red' ref={scrollRef} className='w-16 h-16   rounded-2xl bg-red-500'>
+
+        </div>
+         <div id='scroll-orange' ref={scrollRef} className='w-16 h-16   rounded-2xl bg-orange-500'>
+
+        </div>
+        </div>
+    </div>   
+
+
+     {/* Gsap Timeline */}
+        <h2 className=' text-2xl font-bold '>Gsap Text</h2>
+  
     </div>
+  
 
   )
 }

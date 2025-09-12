@@ -9,23 +9,25 @@ function Hero() {
     {/* <div className="text-3xl">
     Re-branding in Progress...
     </div> */}
-    <div className="flex flex-col items-center justify-center gap-5 w-full">
+    <div className="flex flex-col items-center justify-start gap-5 w-full">
 
 {/* Main Text */}
-<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal  text-5xl md:text-9xl ">
-Currently Rebranding...
+<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal  text-[170px] md:text-9xl ">
+We bring your
 </h1>
-{/* Sub-text */}
-<p className="">
-  Check back soon... we are bringing you something we think you might love ᡣ𐭩
-</p> 
-{/* CTA Button */}
-<button className="py-3 px-5 text-xl rounded-full border cursor-pointer bg-black text-white z-50 ">
-  <Link href="https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business" className='flex gap-2 items-center' target="_blank"
-      rel="noopener noreferrer" >
-<FaWhatsapp className='text-2xl' /> Chat on Whatsapp
-      </Link> 
-</button>
+
+{/* Main Text */}
+<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal  text-[170px] md:text-9xl ">
+We bring your
+</h1>
+
+
+{/* Main Text */}
+<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal  text-[170px] md:text-9xl ">
+We bring your
+</h1>
+
+
     </div>
 
     <div>
