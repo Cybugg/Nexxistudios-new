@@ -7,6 +7,7 @@ import Particles from "./Effects/Particles";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Services from "./components/services";
+import Pricing from "./components/pricing";
 
 
 
@@ -29,6 +30,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <Pricing />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
        
