@@ -5,6 +5,8 @@ import gsap from 'gsap';
 import { useRef } from "react";
 import Particles from "./Effects/Particles";
 import Hero from "./components/hero";
+import About from "./components/about";
+import Services from "./components/services";
 
 
 
@@ -22,9 +24,11 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] min-h-screen px-5 p-2 md:px-0 bg-white text-black font-normal font-clashGrotesk">
-      <main className="flex flex-col  row-start-2 items-center  mx-[120px]" >
-  <TopNav />
-    <Hero />
+      <main className="flex flex-col  row-start-2 items-center mx-auto  lg:mx-[120px]" >
+        <TopNav />
+        <Hero />
+        <About />
+        <Services />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
        
