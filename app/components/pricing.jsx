@@ -51,7 +51,7 @@ function Pricing() {
           
         </div>
 
-        <button className="hover:border-b h-[60.5px] ease-in-out border-b border-b-white duration-100  transition-all text-[16x] lg:text-[19px] flex items-center font-semibold justify-center font-clashGrotesk-Light hover:border-b-black self-start ">See Full Pricing</button>
+        <button className="hover:border-b h-[60.5px] my-3 ease-in-out border-b border-b-white duration-100  transition-all text-[16x] lg:text-[19px] flex items-center font-semibold justify-center font-clashGrotesk-Light hover:border-b-black self-start ">See Full Pricing</button>
       
     </div>
   )

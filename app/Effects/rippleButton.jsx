@@ -68,13 +68,13 @@ const handleMouseLeave = () => {
       href={hrefLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="py-4 px-5 text-xl font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center"
+      className="py-4 px-5 text-xl w-full font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center"
       style={style}
     >
       <div
         ref={containerRef}
-        className="flex gap-[2px] flex-nowrap overflow-hidden  h-[19px]" onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+        className="flex gap-[2px] flex-nowrap overflow-hidden w-full items-center justify-center  h-[19px]" onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave} 
       >
         {[...text].map((char, ind) => (
           <div
