@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import React, {useEffect, useRef} from 'react'
 import { FaWhatsapp } from 'react-icons/fa6';
@@ -122,30 +123,25 @@ return () => {
   return (
      <section className="h-full w-full flex items-center justify-center min-h-screen">
     <div className="w-full">
-    <div className="flex flex-col items-start justify-start w-full  ">
+    <div className="flex flex-col items-start justify-start w-full ">
 
 {/* Main Text */}
-<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal text-8xl sm:text-9xl  lg:text-[170px] ">
+<h1 className=" flex items-center  w-full  md:font-normal my-responsive-text">
 We bring your
 </h1>
 
 {/* Main Text */}
-<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal text-8xl sm:text-9xl   lg:text-[170px] typewriter ">
-     <span ref={textRef} className="min-h-[96px]" />
+<h1 className=" flex items-center  w-full  md:font-normal text-[75px] md:text-[122px]  xl:text-[170px]  typewriter ">
+     <span ref={textRef} className="min-h-[120px] md:min-h-[200px]  z-[9999999]" />
      <div className='hidden lg:block '><span ref={caretRef} className=''  aria-hidden="true" /></div> 
 </h1>
 
-
 {/* Main Text */}
-<h1 className=" flex items-center justify-cente  w-full font-bold md:font-normal text-8xl sm:text-9xl   lg:text-[170px] ">
+<h1 className=" flex items-center  w-full  md:font-normal my-responsive-text">
 to life with code
 </h1>
-
-
     </div>
-
     <div>
-
     </div>
     </div>
       </section>

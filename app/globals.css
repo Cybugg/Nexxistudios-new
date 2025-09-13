@@ -27,3 +27,40 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* globals.css */
+
+
+.my-responsive-text {
+  font-size: 75px;
+  line-height: 0.9em;
+}
+
+
+@media (min-width: 640px) {
+  .my-responsive-text {
+    line-height: 1.5rem; 
+  }
+}
+
+@media (min-width: 800px) {
+  .my-responsive-text {
+    font-size: 100px;
+    line-height: 1.5rem; 
+  }
+}
+
+@media (min-width: 1000px) {
+  .my-responsive-text {
+    font-size: 122px;
+    line-height: 1.5rem; 
+  }
+}
+
+
+@media (min-width: 1405px) {
+  .my-responsive-text {
+    font-size: 170px;
+    line-height: 4rem; 
+  }
+}

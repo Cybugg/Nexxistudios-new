@@ -1,10 +1,10 @@
-"use clinet"
+"use client"
 
 import React, { useState,useRef,useEffect } from 'react'
 import gsap from 'gsap';
 import Link from 'next/link';
 
-function RippleButton({text, hrefLink}) {
+function RippleButton({text, hrefLink, style={}}) {
     
   const containerRef = useRef(null);
   const tlRef = useRef(null);
@@ -69,7 +69,7 @@ const handleMouseLeave = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="py-4 px-5 text-xl font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center"
-      
+      style={style}
     >
       <div
         ref={containerRef}

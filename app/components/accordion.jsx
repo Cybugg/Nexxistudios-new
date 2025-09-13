@@ -1,3 +1,4 @@
+"use client"
 import { MinusIcon, PlusIcon } from "lucide-react";
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ export default function Accordion({ title, children }) {
       >
         
         <span className="text-5xl flex items-center justify-center ">{isOpen ? <MinusIcon /> : <PlusIcon />}</span>
-        <span className="text-[19px] font-bold">{title}</span>
+        <span className="text-[16x] lg:text-[19px] font-bold">{title}</span>
       </button>
  
       {/* Content */}
@@ -22,7 +23,7 @@ export default function Accordion({ title, children }) {
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="text-[19px] font-bold pl-[52px]">{children}</div>
+        <div className="text-[16x] lg:text-[19px] font-bold pl-[52px]">{children}</div>
       </div>
     </div>
   );
