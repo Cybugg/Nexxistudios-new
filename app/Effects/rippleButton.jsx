@@ -4,7 +4,7 @@ import React, { useState,useRef,useEffect } from 'react'
 import gsap from 'gsap';
 import Link from 'next/link';
 
-function RippleButton({text, hrefLink, style={}}) {
+function RippleButton({text, hrefLink, style={}, class_=""}) {
     
   const containerRef = useRef(null);
   const tlRef = useRef(null);
@@ -68,7 +68,7 @@ const handleMouseLeave = () => {
       href={hrefLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="py-4 px-5 text-xl w-full font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center"
+      className={`py-4  px-5 text-xl w-full font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center ` +class_}
       style={style}
     >
       <div

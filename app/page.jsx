@@ -25,8 +25,8 @@ export default function Home() {
   },);
 
   return (
-    <div className="pt-8 min-h-screen px-5  md:px-0 bg-white text-black font-normal font-clashGrotesk">
-      <main className="flex flex-col  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
+    <div className="pt-8 min-h-screen  bg-white text-black font-normal font-clashGrotesk">
+      <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
         <TopNav />
         <Hero />
         <About />

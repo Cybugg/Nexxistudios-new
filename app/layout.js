@@ -70,6 +70,17 @@ export default function RootLayout({ children }) {
     disableRotation={false}
   />
         </div>
+           <div className="absolute w-full bottom-0 right-0 mb-[40px] h-[250px]  z-[1]">
+              <Particles particleColors={['#ffffff', '#ffffff']}
+    particleCount={300}
+    particleSpread={20}
+    speed={0.1}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={false}
+    disableRotation={false}
+  />
+        </div>
     
         {children}
       </body>
