@@ -40,7 +40,7 @@ export default function PricingPage() {
                   {/* Elements */}
                   {pricingOverview.map((ele,ind)=>(
         
-                       <div className='flex flex-col gap-6 rounded-4xl border border-black hover:outline-2 hover:outline-black transition-all ease-in-out p-6' key={ind} id={ele.id}>
+                       <div className='flex flex-col gap-6 rounded-4xl border border-black hover:outline-2 hover:outline-black transition-all ease-in-out p-6' key={ind} >
                       <div>
                          <h3 className='text-[24px] lg:text-[32px] font-clashGrotesk-medium font-medium'>
                         {ele.title}
@@ -62,10 +62,10 @@ export default function PricingPage() {
 
                 <div className="">
                     {/* each detailed pricing */}
-           {detailedPricing.map((ele,id)=>  ( <div className="py-10" key={id}>
-                    <div className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium" >
+           {detailedPricing.map((ele,id)=>  ( <div className="py-10" key={id} id={ele.id}>
+                    <h4 className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium" >
                    {ele.title}
-                    </div>
+                    </h4>
                     {/* table */}
                     <div className="table w-full">
                       {/*table title */}
@@ -102,8 +102,27 @@ export default function PricingPage() {
 
                 </div>
                 <div className='py-10'>
+                      {/* title */}
+                      <h3 className='text-[28px] lg:text-[56px]  font-clashGrotesk-medium font-medium' id='heading-pricing'>
+                        Add-Ons
+                      </h3>
+                      <p className='text-[20px] md:text-[28px] font-medium pb-4'>
+                        Optional extras you can pair with any of our services to keep your project running smoothly.
+                      </p>
+                      {/* Various add-ons */}
+                      <div>
 
-                  
+                        {/* elements */}
+                       {addOns.map((ele,ind_add)=>(<div className='flex flex-col gap-3 py-4' key={ind_add}>
+                          {/* title */}
+                          <h5 className='font-medium font-clashGrotesk-medium text-[16x] lg:text-[19px] leading-6'>
+                            {ele.title}
+                          </h5>
+                      <p className='font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>
+                        {ele.details}
+                      </p>
+                        </div>)) }
+                      </div>
                 </div>
         
                 {/* <button className="hover:border-b h-[60.5px] my-3 ease-in-out border-b border-b-white duration-100  transition-all  flex items-center  justify-center font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6 hover:border-b-black self-start ">See Full Pricing</button> */}
