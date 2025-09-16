@@ -9,9 +9,14 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 const clashGrotesk = localFont({
-  src:"../public/fonts/OTF/ClashGrotesk-Medium.otf",
+  src:"../public/fonts/OTF/ClashGrotesk-Regular.otf",
   variable:"--font-clashGrotesk",
   style:"normal"
+})
+const clashGroteskMedium = localFont({
+  src:"../public/fonts/OTF/ClashGrotesk-Medium.otf",
+  variable:"--font-clashGrotesk-medium",
+  style:"light"
 })
 
 const geistMono = Geist_Mono({
@@ -53,11 +58,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative ${clashGrotesk.variable} `}>
-            <div className="absolute w-full h-screen">
-              <Particles particleColors={['#000000', '#000000']}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative ${clashGrotesk.variable} ${clashGroteskMedium.variable}`}>
+
+           <div className="absolute w-full bottom-0 right-0 mb-[40px] h-[250px]  z-[1]">
+              <Particles particleColors={['#ffffff', '#ffffff']}
     particleCount={300}
-    particleSpread={10}
+    particleSpread={20}
     speed={0.1}
     particleBaseSize={100}
     moveParticlesOnHover={true}
