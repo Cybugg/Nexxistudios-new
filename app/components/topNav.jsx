@@ -15,7 +15,7 @@ function TopNav() {
 
 
   return (
-    <div className="flex fixed justify-between items-center w-full px-[20px] md:px-[50px] bg-white top-0 py-5 md:py-7  xl:px-[120px] z-[999999999]">
+    <div className="flex fixed justify-between items-center w-full px-[20px] md:px-[50px] bg-white top-0 py-3 md:py-7  xl:px-[120px] z-[999999999]">
     {/* Logo */}
     <div className='w-full z-[600]'>
       <Image src={logo} width={48} className='w-[48px] h-[46px] object-cover' height={46} alt="nexxistudios's logo" />
