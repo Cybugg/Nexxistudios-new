@@ -31,7 +31,7 @@ export default function PricingPage() {
         })
     },[])
   return (
-    <div className="pt-8 min-h-screen z-[9999999]  bg-white text-black font-normal font-clashGrotesk">
+    <div className="pt-12 min-h-screen z-[9999999]  bg-white text-black font-normal font-clashGrotesk">
       <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
         <TopNav />
          <div className='flex flex-col py-[40px] w-full'>
