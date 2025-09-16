@@ -15,7 +15,7 @@ function TopNav() {
 
 
   return (
-    <div className="flex justify-between items-center w-full relative">
+    <div className="flex fixed justify-between items-center w-full px-[20px] md:px-[50px] bg-white top-0 py-3  xl:px-[120px] z-[999999999]">
     {/* Logo */}
     <div className='w-full z-[600]'>
       <Image src={logo} width={48} className='w-[48px] h-[46px] object-cover' height={46} alt="nexxistudios's logo" />
@@ -50,7 +50,7 @@ function TopNav() {
 
 
      {/* Mobile Navigation */}
-    {  openNav && <div className="flex text-black  bg-white bottom-0 left-0 right-0 fixed flex-col w-full h-screen gap-12 items-center pt-25 justify-start z-80">
+    {  openNav && <div className="flex text-black  bg-white bottom-0 left-0 right-0 fixed flex-col w-full h-screen gap-12 items-center pt-64 justify-start z-80">
       
       <div className="flex flex-col gap-8 items-center justify-center">
            <Link href="/" 
