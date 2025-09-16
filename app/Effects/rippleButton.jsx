@@ -66,9 +66,8 @@ const handleMouseLeave = () => {
   return (
      <Link
       href={hrefLink}
-      target="_blank"
       rel="noopener noreferrer"
-      className={`py-4  px-5 text-xl w-full font-clashGrotesk leading-4 rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center ` +class_}
+      className={`py-4  px-5 text-xl  font-clashGrotesk font-semibold  text-[16x] lg:text-[19px]  rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center ` +class_}
       style={style}
     >
       <div

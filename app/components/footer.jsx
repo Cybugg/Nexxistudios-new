@@ -14,8 +14,8 @@ function Footer() {
       <div className='flex flex-col lg:flex-row gap-[140px] items-start '>
 
 {/* Item 1: Contact field */}
-<div className='w-full lg:w-[466px] flex flex-col  justify-center gap-6'>
-     <div className='text-[51px] lg:text-[80px] leading-24' id="heading-footer">Contact Us</div>
+<div className='w-full lg:w-[466px] flex flex-col  justify-center gap-6' id='contactUs'>
+     <div className='text-[51px] lg:text-[80px] leading-24 font-clashGrotesk-medium font-medium ' id="heading-footer">Contact Us</div>
 
      <form className='w-full flex flex-col items-center justify-center gap-3'>
       {/* Name filed */}
@@ -42,29 +42,29 @@ function Footer() {
 <div className='flex flex-col gap-12'>
   {/* Links */}
   <div className='flex flex-col gap-4 '>
-     <Link href="https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business" 
-      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk-Light font-bold ">
+     <Link href="#heading-about" 
+      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk ">
  <p className='leading-normal'>About</p>
       </Link> 
-  <Link href="https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business" 
-      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk-Light font-bold">
+  <Link href="#heading-services" 
+      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk">
  <p className='leading-normal'>Services</p>
       </Link> 
-  <Link href="https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business" 
-      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk-Light font-bold">
+  <Link href="/pricing" 
+      rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk">
  <p className='leading-normal'>Pricing</p>
       </Link> 
     </div>
     <div className='flex gap-2 items-center'>
-  <Link href="instagram" 
+  <Link href="https://www.instagram.com/nexxistudios/" 
       rel="noopener noreferrer" className=" text-white ">
         <Instagram />
       </Link> 
-       <Link href="facebook" 
+       <Link href="https://www.facebook.com/share/19pTXbjXML/" 
       rel="noopener noreferrer" className=" text-white ">
         <Facebook />
       </Link> 
-       <Link href="linkedin" 
+       <Link href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Aorganization%3A108860947&keywords=Nexxi%20Studios&origin=ENTITY_SEARCH_HOME_HISTORY&sid=8PE" 
       rel="noopener noreferrer" className=" text-white ">
         <Linkedin />
       </Link> 
@@ -72,10 +72,10 @@ function Footer() {
 
 </div>
  <div className='lg:mt-0 mt-[-80px] '>
-     <div className=' text-[19px]  cursor-pointer '><span className='text-[19px] font-clashGrotesk-Light font-bold'> Mail: info@nexxistudios.com</span></div>
+     <div className=' text-[19px]  cursor-pointer '><span className='text-[19px] font-clashGrotesk-Light font-clashGrotesk-medium font-medium'> Mail: info@nexxistudios.com</span></div>
       </div>
       </div>
-      <div className='flex items-center py-24 w-full  md:font-normal my-responsive-text'>
+      <div className='flex items-center py-24 w-full   my-responsive-text font-clashGrotesk-medium font-medium '>
         Nexxi Studios
       </div>    
     </div>

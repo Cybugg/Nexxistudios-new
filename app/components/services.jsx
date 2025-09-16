@@ -27,7 +27,7 @@ function Services() {
   return (
     <div className='flex flex-col py-[40px] w-full'>
 
-      <div className='text-[51px] lg:text-[80px] opacity-0' id='heading-services' ref={scrollRef}>Our Services</div>  
+      <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium ' id='heading-services' ref={scrollRef}>Our Services</div>  
         <div className='space-y-1.5'>
             <Accordion title={"Website Rescue & Redesign"} >We specialize in reviving outdated, slow, or broken websites, optimizing them for performance, and giving them a modern, user-friendly interface. We'll migrate your site to a modern, reliable stack, ensuring it's not just functional, but future-proof.
 </Accordion>

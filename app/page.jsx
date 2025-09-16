@@ -1,8 +1,6 @@
 "use client"
-import { useGSAP } from "@gsap/react";
+
 import TopNav from "./components/topNav";
-import gsap from 'gsap';
-import { useRef } from "react";
 import Particles from "./Effects/Particles";
 import Hero from "./components/hero";
 import About from "./components/about";
@@ -14,18 +12,22 @@ import Footer from "./components/footer";
 
 
 export default function Home() {
-  const boxRef = useRef(null);
-  useGSAP(() => {
-  
-    gsap.to("#progress", {
-      width:"95%",
-      duration:3,
-      ease: 'power2.out',
-    });
-  },);
 
   return (
-    <div className="pt-8 min-h-screen  bg-white text-black font-normal font-clashGrotesk">
+    <div className="pt-8 min-h-screen relative  bg-white text-black font-normal font-clashGrotesk">
+      
+                 <div className="absolute w-full h-screen ">
+              <Particles particleColors={['#000000', '#000000']}
+    particleCount={300}
+    particleSpread={10}
+    speed={0.1}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={false}
+    disableRotation={false}
+  />
+
+      </div>
       <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
         <TopNav />
         <Hero />

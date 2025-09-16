@@ -126,18 +126,18 @@ return () => {
     <div className="flex flex-col items-start justify-start w-full ">
 
 {/* Main Text */}
-<h1 className=" flex items-center  w-full  md:font-normal my-responsive-text">
+<h1 className=" flex items-center  w-full  font-clashGrotesk-medium font-medium my-responsive-text">
 We bring your
 </h1>
 
 {/* Main Text */}
-<h1 className=" flex items-center  w-full  md:font-normal text-[75px] md:text-[122px]  xl:text-[170px]  typewriter ">
-     <span ref={textRef} className="min-h-[120px] md:min-h-[200px]  z-[9999999]" />
+<h1 className=" flex items-center  w-full  font-clashGrotesk-medium font-medium text-[75px] md:text-[122px]  xl:text-[170px]  typewriter ">
+     <span ref={textRef} className="min-h-[120px] md:min-h-[200px]  z-[40]" />
      <div className='hidden lg:block '><span ref={caretRef} className=''  aria-hidden="true" /></div> 
 </h1>
 
 {/* Main Text */}
-<h1 className=" flex items-center  w-full  md:font-normal my-responsive-text">
+<h1 className=" flex items-center  w-full  font-clashGrotesk-medium font-medium my-responsive-text">
 to life with code
 </h1>
     </div>

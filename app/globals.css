@@ -12,7 +12,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-clashGrotesk: var(--font-clashGrotesk);
-    --font-clashGrotesk-Light: var(--font-clashGrotesk-Light)
+    --font-clashGrotesk-medium: var(--font-clashGrotesk-medium)
 }
 
 @media (prefers-color-scheme: dark) {
