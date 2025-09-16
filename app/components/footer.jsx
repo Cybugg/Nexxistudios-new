@@ -9,7 +9,7 @@ import { FaEnvelope, FaWhatsapp } from 'react-icons/fa6';
 
 function Footer() {
   return (
-    <div className='bg-black w-full text-white min-h-[60vh] px-5 z-[50] px-auto md:px-[50px] py-16  xl:px-[120px]'>
+    <div className='bg-black w-full text-white min-h-[60vh] px-5 z-[50] px-auto md:px-[50px] py-16  xl:px-[120px]' id="contactUs">
 
       <div className='flex flex-col lg:flex-row gap-[140px] items-start '>
 
