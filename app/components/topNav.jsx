@@ -45,7 +45,7 @@ function TopNav() {
 
 
 {/* Desktop button */}
-<RippleButton class_="hidden md:block" hrefLink={"https://wa.me/2349117169239?text=Hello%20I%20want%20a%20website%20or%20software%20for%20my%20business"} text={"Contact Us"} />
+<RippleButton class_="hidden md:block" hrefLink={"/#contactUs"} text={"Contact Us"} />
     </div>
 
 

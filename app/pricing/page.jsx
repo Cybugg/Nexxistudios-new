@@ -28,19 +28,71 @@ export default function PricingPage() {
           start:"bottom bottom",
           end:"top 20%"
   }
-        })
+        }) 
+         
+          gsap.to("#creative-websites",{
+              opacity:1,
+              ease:"power1.inOut",
+               duration:1,
+              scrollTrigger:{
+                trigger:"#creative-websites",
+                scrub:true,
+                start:"bottom bottom",
+                end:"top 20%"
+              }
+            })
+
+              gsap.to("#website-redesign-rescue",{
+              opacity:1,
+              ease:"power1.inOut",
+             duration:1,
+              scrollTrigger:{
+                trigger:"#website-redesign-rescue",
+                scrub:true,
+                start:"bottom bottom",
+                end:"top 20%"
+              }
+            })
+
+              gsap.to("#software-development",{
+              opacity:1,
+              ease:"power1.inOut",
+             duration:1,
+              scrollTrigger:{
+                trigger:"#software-development",
+                scrub:true,
+                start:"bottom bottom",
+                end:"top 20%"
+              }
+            })
+
+              gsap.to("#seo-growth",{
+              opacity:1,
+              ease:"power1.inOut",
+               duration:1,
+              scrollTrigger:{
+                trigger:"#seo-growth",
+                scrub:true,
+                start:"bottom bottom",
+                end:"top 20%"
+              }
+            })
+            
     },[])
+
+
+    
   return (
     <div className="pt-12 min-h-screen z-[9999999]  bg-white text-black font-normal font-clashGrotesk">
       <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
         <TopNav />
          <div className='flex flex-col py-[40px] w-full'>
-                <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium' id='heading-pricing' ref={scrollRef}>Pricing</div>
+                <div className='text-[51px] lg:text-[80px] opacity-0  font-clashGrotesk-medium font-medium' id='heading-pricing' ref={scrollRef}>Pricing</div>
                 <div className='grid grid-cols-1 md:grid-cols-2  pb-8 gap-8'>
                   {/* Elements */}
                   {pricingOverview.map((ele,ind)=>(
         
-                       <div className='flex flex-col gap-6 rounded-4xl border border-black hover:outline-2 hover:outline-black transition-all ease-in-out p-6' key={ind} >
+                       <div className='flex flex-col gap-6 rounded-4xl  border border-black hover:outline-2 hover:outline-black transition-all ease-in-out p-6' key={ind} >
                       <div>
                          <h3 className='text-[24px] lg:text-[32px] font-clashGrotesk-medium font-medium'>
                         {ele.title}
@@ -62,8 +114,8 @@ export default function PricingPage() {
 
                 <div className="">
                     {/* each detailed pricing */}
-           {detailedPricing.map((ele,id)=>  ( <div className="py-10" key={id} id={ele.id}>
-                    <h4 className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium" >
+           {detailedPricing.map((ele,id)=>  ( <div className="py-10" key={id} >
+                    <h4 className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium opacity-0" id={ele.id} >
                    {ele.title}
                     </h4>
                     {/* table */}

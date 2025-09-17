@@ -51,7 +51,7 @@ export const detailedPricing = [
     },
     {
         title : "Website Redesign & Rescue",
-         id:"website-redesign-&-rescue",
+         id:"website-redesign-rescue",
         details:[
         {
             package:"Refresh",
@@ -90,7 +90,7 @@ export const detailedPricing = [
     ,
     {
         title : "SEO & Growth",
-        id:"seo-&-growth",
+        id:"seo-growth",
         details:[
         {
             package:"Basic SEO",
