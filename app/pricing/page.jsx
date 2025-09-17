@@ -115,7 +115,7 @@ export default function PricingPage() {
                 <div className="">
                     {/* each detailed pricing */}
            {detailedPricing.map((ele,id)=>  ( <div className="py-10" key={id} >
-                    <h4 className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium opacity-0" id={ele.id} >
+                    <h4 className="text-[38px] md:text-[56px] font-clashGrotesk-medium font-medium opacity-0" id={ele.id} style={{scrollMarginTop:"120px"}} >
                    {ele.title}
                     </h4>
                     {/* table */}
