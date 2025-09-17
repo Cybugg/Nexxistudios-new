@@ -84,7 +84,7 @@ export default function PricingPage() {
     
   return (
     <div className="pt-12 min-h-screen z-[9999999]  bg-white text-black font-normal font-clashGrotesk">
-      <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
+      <main className="flex flex-col px-5   row-start-2 items-center mx-auto md:px-[50px]  xl:px-[120px]" >
         <TopNav />
          <div className='flex flex-col py-[40px] w-full'>
                 <div className='text-[51px] lg:text-[80px] opacity-0  font-clashGrotesk-medium font-medium' id='heading-pricing' ref={scrollRef}>Pricing</div>
