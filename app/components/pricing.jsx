@@ -22,6 +22,7 @@ function Pricing() {
           end:"top 20%"
   }
         })
+
     },[])
   return (
    <div className='flex flex-col py-[40px] w-full'>
@@ -32,7 +33,7 @@ function Pricing() {
 
                <div className='flex flex-col gap-6 rounded-4xl border border-black hover:outline-2 hover:outline-black transition-all ease-in-out p-6' key={ind}>
               <div>
-                 <h3 className='text-[24px] lg:text-[32px] font-clashGrotesk-medium font-medium'>
+                 <h3 className='text-[24px]  lg:text-[32px] font-clashGrotesk-medium font-medium'>
                 {ele.title}
               </h3>
               <p className='font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>
