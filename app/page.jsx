@@ -28,7 +28,7 @@ export default function Home() {
   />
 
       </div>
-      <main className="flex flex-col px-5  md:px-0  row-start-2 items-center mx-auto md:mx-[50px]  xl:mx-[120px]" >
+      <main className="flex flex-col px-5  row-start-2 items-center mx-auto md:px-[50px]  xl:px-[120px]" >
         <TopNav />
         <Hero />
         <About />
