@@ -23,7 +23,7 @@ function Footer() {
    const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-
+ show("success", "we are processing your request...");
     try {
       const res = await fetch("https://nexxis-studios-tg-api.onrender.com/contact", {
         method: "POST",
