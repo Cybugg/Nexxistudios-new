@@ -50,7 +50,7 @@ function TopNav() {
 
 
      {/* Mobile Navigation */}
-    {  openNav && <div className="flex text-black  bg-white bottom-0 left-0 right-0 fixed flex-col w-full h-screen gap-12 items-center pt-64 justify-start z-80">
+    {  openNav && <div className="flex text-black  bg-white bottom-0 left-0 right-0 fixed flex-col w-full h-screen gap-12 items-center pt-48 justify-start z-80">
       
       <div className="flex flex-col gap-8 items-center justify-center">
            <Link href="/" 
