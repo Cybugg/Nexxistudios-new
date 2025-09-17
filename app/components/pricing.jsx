@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/all'
 
 gsap.registerPlugin(ScrollTrigger);
 import { pricingOverview } from '../utils/data';
+import Link from 'next/link'
 
 function Pricing() {
   const scrollRef = useRef();
@@ -26,7 +27,7 @@ function Pricing() {
     },[])
   return (
    <div className='flex flex-col py-[40px] w-full'>
-        <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium' id='heading-pricing' ref={scrollRef}>Pricing</div>
+        <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium' id='heading-pricing' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Pricing</div>
         <div className='grid grid-cols-1 md:grid-cols-2  pb-8 gap-8'>
           {/* Elements */}
           {pricingOverview.map((ele,ind)=>(
@@ -52,7 +53,7 @@ function Pricing() {
           
         </div>
 
-        <button className="hover:border-b h-[60.5px] my-3 ease-in-out border-b border-b-white duration-100  transition-all  flex items-center  justify-center font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6 hover:border-b-black self-start ">See Full Pricing</button>
+      <Link href="/pricing"><button className="hover:border-b h-[60.5px] my-3 ease-in-out border-b border-b-white duration-100  transition-all  flex items-center  justify-center font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6 hover:border-b-black self-start ">See Full Pricing</button></Link>  
       
     </div>
   )

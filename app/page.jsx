@@ -14,7 +14,7 @@ import Footer from "./components/footer";
 export default function Home() {
 
   return (
-    <div className="pt-8 min-h-screen relative  bg-white text-black font-normal font-clashGrotesk">
+    <div className="pt-12 min-h-screen relative  bg-white text-black font-normal font-clashGrotesk">
       
                  <div className="absolute w-full h-screen ">
               <Particles particleColors={['#000000', '#000000']}

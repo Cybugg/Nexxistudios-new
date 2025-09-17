@@ -122,7 +122,7 @@ function Footer() {
       </div>
         {/* Text Area */}
        <div className='border border-white w-full py-3 px-4 rounded-xl'>
-        <TextareaAutosize className='w-full outline-0 min-h-20 max-h-24' name='message' value={form.message} onChange={handleChange}  placeholder='message' maxLength={500} />
+        <TextareaAutosize className='w-full outline-0 min-h-20 max-h-24' name='message' value={form.message} onChange={handleChange}  placeholder='Message' maxLength={500} />
       </div>
       <button className='py-4  px-5 text-xl  font-clashGrotesk font-semibold  text-[16px] lg:text-[19px]  rounded-[785px] h-[53px] justify-center border cursor-pointer flex items-center w-full bg-white text-black ' type='submit'>
    <div
@@ -173,15 +173,15 @@ function Footer() {
     </div>
     <div className='flex gap-2 items-center'>
   <Link href="https://www.instagram.com/nexxistudios/" 
-      rel="noopener noreferrer" className=" text-white ">
+      rel="noopener noreferrer" target='__blank' className=" text-white ">
         <Instagram />
       </Link> 
        <Link href="https://www.facebook.com/share/19pTXbjXML/" 
-      rel="noopener noreferrer" className=" text-white ">
+      rel="noopener noreferrer" target='__blank' className=" text-white ">
         <Facebook />
       </Link> 
        <Link href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Aorganization%3A108860947&keywords=Nexxi%20Studios&origin=ENTITY_SEARCH_HOME_HISTORY&sid=8PE" 
-      rel="noopener noreferrer" className=" text-white ">
+      rel="noopener noreferrer" target='__blank' className=" text-white ">
         <Linkedin />
       </Link> 
     </div>
