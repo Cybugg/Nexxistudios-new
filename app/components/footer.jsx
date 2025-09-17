@@ -158,11 +158,11 @@ function Footer() {
 <div className='flex flex-col gap-12'>
   {/* Links */}
   <div className='flex flex-col gap-4 '>
-     <Link href="#heading-about" 
+     <Link href="/#heading-about" 
       rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk ">
  <p className='leading-normal'>About</p>
       </Link> 
-  <Link href="#heading-services" 
+  <Link href="/#heading-services" 
       rel="noopener noreferrer" className=" text-[19px] font-clashGrotesk">
  <p className='leading-normal'>Services</p>
       </Link> 
