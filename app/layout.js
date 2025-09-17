@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative ${clashGrotesk.variable} ${clashGroteskMedium.variable}`}>
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased relative ${clashGrotesk.variable} ${clashGroteskMedium.variable}`}>
 
            <div className="absolute w-full bottom-0 right-0 mb-[40px] h-[250px]  z-[1]">
               <Particles particleColors={['#ffffff', '#ffffff']}
