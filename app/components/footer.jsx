@@ -23,9 +23,9 @@ function Footer() {
    const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(!form.name && !form.email && !message){
+    if(!form.name && !form.email && !form.message){
       setStatus("need for input")
-      show("Sorry, You will have to provide complete info!")
+      show("error","Sorry, You will have to provide complete info!")
       return;
     };
 
