@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 export default function LenisProvider({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,   // important for mouse scroll
-      smoothTouch: true,   // keep touch working
-      wheelMultiplier: 1,  // sensitivity of mouse wheel
-      touchMultiplier: 1.5,
-      gestureOrientation: "vertical",
-    easing: (t) => Math.min(1.3, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
+       duration: 1.2,             // how long the scroll animation lasts (higher = smoother, but slower)
+  smooth: true,              // enable smoothing globally
+  smoothWheel: true,         // smooth out mouse wheel scrolling
+  smoothTouch: true,         // smooth out touch scrolling (mobile)
+  wheelMultiplier: 1.1,      // tweak sensitivity of mouse wheel
+  touchMultiplier: 1.3,      // tweak sensitivity for touch input
+  gestureOrientation: "vertical", // scroll direction
+  easing: (t) => 1 - Math.pow(2, -10 * t), 
     });
 
     function raf(time) {
