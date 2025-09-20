@@ -35,7 +35,13 @@ body {
   font-size: 75px;
   line-height: 0.9em;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw; /* ✅ never exceed viewport */
+  overflow-x: hidden; /* ✅ prevent sideways scroll */
+}
 
 @media (min-width: 640px) {
   .my-responsive-text {

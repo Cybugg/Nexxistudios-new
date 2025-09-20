@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Particles from "./Effects/Particles";
+import LenisProvider from "./components/LenisProvider";
 
 
 const geistSans = Geist({
@@ -71,8 +72,10 @@ export default function RootLayout({ children }) {
     disableRotation={false}
   />
         </div>
-    
-        {children}
+    <LenisProvider>
+       {children}
+    </LenisProvider>
+       
       </body>
     </html>
   );
