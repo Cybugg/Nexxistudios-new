@@ -17,7 +17,7 @@ function RingModel({ mouse }) {
     }
   });
 
-  return <primitive ref={ref} object={scene} scale={0.4} />;
+  return <primitive ref={ref} object={scene} scale={0.5} />;
 }
 
 function ProgressBar() {
