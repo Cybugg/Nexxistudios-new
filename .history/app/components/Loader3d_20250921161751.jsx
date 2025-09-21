@@ -50,7 +50,7 @@ export default function Loader3D({ onFinish }) {
       const timer = setTimeout(() => {
         setShow(false);
         onFinish(); // ✅ safe to call inside useEffect
-      }, 1500); // let fade-out animation play
+      }, 1000); // let fade-out animation play
       return () => clearTimeout(timer);
     }
   }, [progress, onFinish]);
