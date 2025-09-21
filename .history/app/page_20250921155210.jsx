@@ -8,7 +8,6 @@ import Services from "./components/services";
 import Pricing from "./components/pricing";
 import Footer from "./components/footer";
 import Loader3D from "./components/Loader3d";
-import { useState } from "react";
 
 
 

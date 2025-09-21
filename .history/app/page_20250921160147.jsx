@@ -17,7 +17,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   return (
     <div className="pt-12 min-h-screen relative  bg-white text-black font-normal font-clashGrotesk">
-       {loading && <Loader3D onFinish={() => setLoading(false)} />}
+       {loading && <Loader3D onFinish={
+        () => setLoading(false)} />}
      {!loading && <div>
 
                  <div className="absolute w-full h-screen ">

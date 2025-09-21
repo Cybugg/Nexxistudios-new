@@ -8,13 +8,12 @@ import Services from "./components/services";
 import Pricing from "./components/pricing";
 import Footer from "./components/footer";
 import Loader3D from "./components/Loader3d";
-import { useState } from "react";
 
 
 
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useStat(true);
   return (
     <div className="pt-12 min-h-screen relative  bg-white text-black font-normal font-clashGrotesk">
        {loading && <Loader3D onFinish={() => setLoading(false)} />}
