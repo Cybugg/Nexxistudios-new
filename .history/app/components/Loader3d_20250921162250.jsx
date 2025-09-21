@@ -32,7 +32,7 @@ function ProgressBar() {
           transition={{ duration: 0.2 }}
         />
       </div>
-      <p className=" text-sm  text-black font-extrabold">
+      <p className=" text-sm  text-black font-extraboldbold">
         {Math.round(progress)}%
         </p>
     </Html>
