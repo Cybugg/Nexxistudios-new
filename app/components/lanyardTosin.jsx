@@ -18,7 +18,7 @@ import * as THREE from 'three';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-export default function Lanyard({
+export default function LanyardTosin({
   position = [0, 0, 30],
   gravity = [0, -40, 0],
   fov = 20,
@@ -74,7 +74,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
 
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
 
-  const { nodes, materials } = useGLTF('/models/card1.glb');
+  const { nodes, materials } = useGLTF('/models/card_tosin.glb');
   const texture = useTexture('/lanyard.png');
 
 
@@ -229,7 +229,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
             position={[0, -3, -0.05]}
             onPointerOver={() => setHover(true)}
             onPointerOut={() => setHover(false)}
-            onPointerDown={(e) => {
+           onPointerDown={(e) => {
   if (isSmall) return; // 🚫 disable dragging on smaller screens
   try {
     e.target.setPointerCapture?.(e.pointerId);
