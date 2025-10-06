@@ -9,6 +9,7 @@ import Pricing from "./components/pricing";
 import Footer from "./components/footer";
 import Loader3D from "./components/Loader3d";
 import { useState } from "react";
+import Team from "./components/team";
 
 
 
@@ -38,6 +39,7 @@ export default function Home() {
         <About />
         <Services />
         <Pricing />
+        <Team />
       </main>
         <Footer />
       </div>}
