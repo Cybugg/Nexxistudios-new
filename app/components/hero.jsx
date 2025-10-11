@@ -121,7 +121,7 @@ return () => {
  }, []);
 
   return (
-     <section className="h-full w-full flex items-center justify-center min-h-screen">
+     <section className="h-full w-full flex items-center justify-center min-h-screen px-5 mx-auto md:px-[50px]  xl:px-[120px]">
     <div className="w-full">
     <div className="flex flex-col items-start justify-start w-full ">
 

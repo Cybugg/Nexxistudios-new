@@ -79,18 +79,18 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
 
 
   useEffect(
-    ()=>{
- // make texture usage correct
-  if (texture) {
-    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(16, 1);
-    // set anisotropy properly on the texture (not as JSX prop)
-    texture.anisotropy = Math.min(16, (typeof window !== 'undefined' && window.devicePixelRatio * 4) || 16);
-    texture.needsUpdate = true;
-  }
-    },[texture]
+    () => {
+      // make texture usage correct
+      if (texture) {
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(16, 1);
+        // set anisotropy properly on the texture (not as JSX prop)
+        texture.anisotropy = Math.min(16, (typeof window !== 'undefined' && window.devicePixelRatio * 4) || 16);
+        texture.needsUpdate = true;
+      }
+    }, [texture]
   )
- 
+
 
   // if materials exist, set a few properties on the material objects to avoid incorrect JSX props
   if (materials?.metal) {
@@ -137,7 +137,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
 
   useFrame((state, delta) => {
 
-    
+
     // dragging kinematic card
     if (dragged && card.current) {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
@@ -229,25 +229,25 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
             position={[0, -3, -0.05]}
             onPointerOver={() => setHover(true)}
             onPointerOut={() => setHover(false)}
-           onPointerDown={(e) => {
-  if (isSmall) return; // 🚫 disable dragging on smaller screens
-  try {
-    e.target.setPointerCapture?.(e.pointerId);
-  } catch (err) {}
-  const offset = new THREE.Vector3().copy(e.point);
-  const t = card.current?.translation ? card.current.translation() : new THREE.Vector3();
-  offset.sub(t);
-  setDragOffset(offset);
-  setDragged(true);
-}}
+            onPointerDown={(e) => {
+              if (isSmall) return; // 🚫 disable dragging on smaller screens
+              try {
+                e.target.setPointerCapture?.(e.pointerId);
+              } catch (err) { }
+              const offset = new THREE.Vector3().copy(e.point);
+              const t = card.current?.translation ? card.current.translation() : new THREE.Vector3();
+              offset.sub(t);
+              setDragOffset(offset);
+              setDragged(true);
+            }}
 
-onPointerUp={(e) => {
-  if (isSmall) return; // 🚫 skip pointer up on mobile
-  try {
-    e.target.releasePointerCapture?.(e.pointerId);
-  } catch (err) {}
-  setDragged(false);
-}}
+            onPointerUp={(e) => {
+              if (isSmall) return; // 🚫 skip pointer up on mobile
+              try {
+                e.target.releasePointerCapture?.(e.pointerId);
+              } catch (err) { }
+              setDragged(false);
+            }}
           >
             {nodes?.card && (
               <mesh geometry={nodes.card.geometry}>

@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import Loader3D from "./components/Loader3d";
 import { useState } from "react";
 import Team from "./components/team";
+import Projects from "./components/projects";
 
 
 
@@ -32,12 +33,13 @@ export default function Home() {
     disableRotation={false}
   />
       </div>
-      <main className="flex flex-col px-5  row-start-2 items-center mx-auto md:px-[50px]  xl:px-[120px]" >
+      <main className="flex flex-col  row-start-2 items-center " >
      
         <TopNav />
         <Hero />
         <About />
         <Services />
+        <Projects />
         <Pricing />
         <Team />
       </main>

@@ -25,7 +25,7 @@ function Services() {
         })
     },[])
   return (
-    <div className='flex flex-col py-[40px] w-full'>
+    <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px]  xl:px-[120px] bg-gradient-to-b from-white to-[#DDDDDD]'>
 
       <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium ' id='heading-services' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Our Services</div>  
         <div className='space-y-1.5'>
