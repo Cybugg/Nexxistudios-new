@@ -4,6 +4,7 @@ import React, {useEffect, useRef} from 'react'
 import { FaWhatsapp } from 'react-icons/fa6';
 import { TextPlugin } from "gsap/TextPlugin";
 import gsap from 'gsap';
+import useThemeStore from '@/app/store/useThemeStore'
 
 function Hero() {
 
@@ -11,7 +12,7 @@ function Hero() {
   const caretRef = useRef(null);
   const masterTlRef = useRef(null);
   const blinkRef = useRef(null);
-
+ const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
   useEffect(() => {
    // Config
 const texts = [
@@ -72,6 +73,7 @@ tl.to(
     duration: 1.1, // always 1.1s typing time
     ease: "none",
     onStart: () => {
+      setDarkMode(false)
       if (blinkRef.current) blinkRef.current.kill();
       gsap.to(caretRef.current, {
         width: caretWide,

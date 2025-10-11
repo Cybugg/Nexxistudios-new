@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import useThemeStore from '@/app/store/useThemeStore'
 
 gsap.registerPlugin(ScrollTrigger);
 import Accordion from './accordion';
@@ -10,7 +11,7 @@ import FadeInText from '../Effects/fadeInText';
 
 function Services() {
   const scrollRef = useRef();
-    
+    const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
     useGSAP(()=>{
         gsap.to("#heading-services",{
             opacity:1,
@@ -20,12 +21,17 @@ function Services() {
         trigger:"#heading-services",
           scrub:true,
           start:"bottom bottom",
-          end:"top 20%"
+          end:"top 20%",
+          onLeave:()=>setDarkMode(false),
+          onEnter:()=>setDarkMode(false),
+          onEnterBack:()=>setDarkMode(false),
+          onLeaveBack:()=>setDarkMode(false),
+
   }
         })
     },[])
   return (
-    <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px]  xl:px-[120px] bg-gradient-to-b from-white to-[#DDDDDD]'>
+    <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px] pb-24  xl:px-[120px] bg-gradient-to-b from-white to-[#DDDDDD]'>
 
       <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium ' id='heading-services' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Our Services</div>  
         <div className='space-y-1.5'>

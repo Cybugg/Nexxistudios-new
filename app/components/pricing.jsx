@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import useThemeStore from '@/app/store/useThemeStore'
 
 gsap.registerPlugin(ScrollTrigger);
 import { pricingOverview } from '../utils/data';
@@ -10,7 +11,7 @@ import Link from 'next/link'
 
 function Pricing() {
   const scrollRef = useRef();
-    
+  const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
     useGSAP(()=>{
         gsap.to("#heading-pricing",{
             opacity:1,
@@ -20,7 +21,11 @@ function Pricing() {
         trigger:"#heading-pricing",
           scrub:true,
           start:"bottom bottom",
-          end:"top 20%"
+          end:"top 20%",
+           onLeave:()=>setDarkMode(false),
+          onEnter:()=>setDarkMode(false),
+          onEnterBack:()=>setDarkMode(false),
+          onLeaveBack:()=>setDarkMode(false),
   }
         })
 

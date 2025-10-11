@@ -3,12 +3,13 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import useThemeStore from '@/app/store/useThemeStore'
 
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const scrollRef = useRef();
-    
+      const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
     useGSAP(()=>{
         gsap.to("#heading-about",{
             opacity:1,
@@ -18,7 +19,11 @@ function About() {
         trigger:"#heading-about",
           scrub:true,
           start:"bottom bottom",
-          end:"top 20%"
+          end:"top 20%",
+           onLeave:()=>setDarkMode(false),
+          onEnter:()=>setDarkMode(false),
+          onEnterBack:()=>setDarkMode(false),
+          onLeaveBack:()=>setDarkMode(false),
   }
         })
     },[])

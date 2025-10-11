@@ -3,12 +3,14 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useThemeStore from '@/app/store/useThemeStore'
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollVideo() {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
+  const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
   const frameCount = 134;
   const currentFrame = (index) =>
     `/frames/frame_${index.toString().padStart(4, "0")}.jpg`;
@@ -32,47 +34,57 @@ export default function ScrollVideo() {
       images.push(img);
     }
 
-    const render = () => {
-      const img = images[Math.round(frame.current)];
-      if (!img) return;
-      const scale = Math.max(
-        canvas.width / img.width,
-        canvas.height / img.height
-      );
-      const x = canvas.width / 2 - (img.width / 2) * scale;
-      const y = canvas.height / 2 - (img.height / 2) * scale;
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(img, x, y, img.width * scale, img.height * scale);
-    };
+   const render = () => {
+  const img = images[Math.round(frame.current)];
+  if (!img) return;
+
+  const canvas = canvasRef.current;
+  const context = canvas.getContext("2d");
+
+  // Fit to width, maintain aspect ratio (no side cropping)
+  const scale = canvas.width / img.width;
+  const scaledHeight = img.height * scale;
+
+  const x = 0;
+  const y = (canvas.height - scaledHeight) / 2; // center vertically
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(img, x, y, canvas.width, scaledHeight);
+};
 
     images[0].onload = render;
 
     // Animation
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: container,
-        start: "top top",
-        end: `+=${frameCount * 20}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        onEnter: () => {
-          canvas.style.position = "fixed";
-          container.style.backgroundColor = "black";
-        },
-        onLeave: () => {
-          canvas.style.position = "relative";
-          container.style.backgroundColor = "transparent";
-        },
-        onEnterBack: () => {
-          canvas.style.position = "fixed";
-          container.style.backgroundColor = "black";
-        },
-        onLeaveBack: () => {
-          canvas.style.position = "relative";
-          container.style.backgroundColor = "transparent";
-        },
-      },
+  trigger: container,
+  start: "top top",
+  end: `+=${frameCount * 20}`,
+  scrub: 1,
+  pin: true,
+  anticipatePin: 1,
+  pinSpacing: false,
+  onEnter: () => {
+    canvas.style.position = "fixed";
+    container.style.backgroundColor = "black";
+
+
+  },
+  onLeave: () => {
+    canvas.style.position = "relative";
+    container.style.backgroundColor = "transparent";
+        setDarkMode(true);
+  },
+  onEnterBack: () => {
+    canvas.style.position = "fixed";
+    container.style.backgroundColor = "black";
+    setDarkMode(true);
+  },
+  onLeaveBack: () => {
+    canvas.style.position = "relative";
+    container.style.backgroundColor = "transparent";
+  },
+},
     });
 
     tl.to(frame, {
@@ -100,17 +112,18 @@ export default function ScrollVideo() {
       {/* Video Scroll Section */}
       <section
         ref={containerRef}
-        className="relative w-full"
-        style={{ height: "400vh", backgroundColor: "black" }}
+        className="relative w-full  mb-0 "
+        style={{ height: "350vh", backgroundColor: "black" }}
       >
         <canvas
           ref={canvasRef}
-          className="block w-full h-screen object-cover"
+         
+          className="block w-full object-cover bg-black"
         />
       </section>
 
-      {/* Next Section */}
-      <section className="w-full h-screen bg-white flex items-center justify-center text-black">
+      {/* Projects Showcase Section */}
+      <section className="w-full h-screen mt-0  text-white flex items-center justify-center bg-black">
         <h1 className="text-4xl font-bold">Next Section</h1>
       </section>
     </>
