@@ -45,6 +45,7 @@ export default function Loader3D({ onFinish }) {
   const progress = useFullProgress(); 
   const [show, setShow] = useState(true);
 
+  
   // For debugging
 // useEffect(() => {
 //   console.log("Progress:", progress);
