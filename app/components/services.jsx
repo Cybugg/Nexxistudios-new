@@ -33,7 +33,7 @@ function Services() {
   return (
     <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px] pb-24  xl:px-[120px] bg-gradient-to-b from-white to-[#DDDDDD]'>
 
-      <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium ' id='heading-services' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Our Services</div>  
+      <div className='text-[51px] lg:text-[80px]  font-clashGrotesk-medium font-medium ' id='heading-services' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Our Services</div>  
         <div className='space-y-1.5'>
             <Accordion title={"Website Rescue & Redesign"} >We specialize in reviving outdated, slow, or broken websites, optimizing them for performance, and giving them a modern, user-friendly interface. We'll migrate your site to a modern, reliable stack, ensuring it's not just functional, but future-proof.
 </Accordion>

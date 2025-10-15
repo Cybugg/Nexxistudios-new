@@ -11,6 +11,8 @@ import Loader3D from "./components/Loader3d";
 import { useState } from "react";
 import Team from "./components/team";
 import Projects from "./components/projects";
+import MoreText from "./components/moreText";
+
 
 
 
@@ -40,6 +42,7 @@ export default function Home() {
         <About />
         <Services />
         <Projects />
+        <MoreText />
         <Pricing />
         <Team />
       </main>

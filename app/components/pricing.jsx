@@ -29,10 +29,10 @@ function Pricing() {
   }
         })
 
-    },[])
+    },[setDarkMode,darkMode])
   return (
    <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px]  xl:px-[120px]'>
-        <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium' id='heading-pricing' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Pricing</div>
+        <div className='text-[51px] lg:text-[80px]  font-clashGrotesk-medium font-medium' id='heading-pricing' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Pricing</div>
         <div className='grid grid-cols-1 md:grid-cols-2  pb-8 gap-8'>
           {/* Elements */}
           {pricingOverview.map((ele,ind)=>(

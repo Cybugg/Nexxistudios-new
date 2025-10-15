@@ -56,19 +56,19 @@ function TopNav() {
       
       <div className="flex flex-col gap-8 items-center justify-center">
            <Link href="/" 
-      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out border-b duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black" onClick={()=> setOpenNav(false)}>
+      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black" onClick={()=> setOpenNav(false)}>
  <p className='md:hidden block font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>Home</p>
       </Link> 
  <Link href="/#heading-about"  onClick={()=> setOpenNav(false)}
-      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out border-b duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
+      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
  <p className='md:hidden block font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>About</p>
       </Link> 
   <Link href="/#heading-services"  onClick={()=> setOpenNav(false)}
-      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out border-b  duration-100 0 transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
+      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out  duration-100 0 transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
  <p className='md:hidden block font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>Services</p>
       </Link> 
   <Link href="/pricing"  onClick={()=> setOpenNav(false)}
-      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out border-b duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
+      rel="noopener noreferrer" className=" hover:border-b h-[60.5px] ease-in-out duration-100  transition-all text-sm text-[19px] flex items-center md:font-semibold justify-center font-clashGrotesk-Light hover:border-b-black">
  <p className='md:hidden block font-clashGrotesk text-[16x] lg:text-[19px] font-[400] leading-6'>Pricing</p>
       </Link> 
       </div>
