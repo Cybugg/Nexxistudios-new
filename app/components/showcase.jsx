@@ -8,12 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 1, title: "Business & Corperate", subtitle: "Creative Agency", video: "/videos/lexora.webm" ,poster:"/images/1.png"},
-  { id: 2, title: "Creative & Personal", subtitle: "3D Motion Showcase", video: "/videos/port.webm" ,poster:"/images/2.png"},
-  { id: 3, title: "E-Commerce", subtitle: "Full Stack Project", video: "/videos/noctura.webm" ,poster:"/images/3.png"},
-  { id: 4, title: "Startup", subtitle: "AI Simulation", video: "/videos/ai_build.webm" ,poster:"/images/4.png"},
-  { id: 5, title: "SaaS & Web3 Software", subtitle: "AI Simulation", video: "/videos/saas.webm" ,poster:"/images/5.png"},
-  { id: 6, title: "Creative Agency", subtitle: "AI Simulation", video: "/videos/creative.webm" ,poster:"/images/6.png"},
+  { id: 1, title: "Business & Corperate", subtitle: "Creative Website that works", video: "/videos/lexora.webm" ,poster:"/images/1.png"},
+  { id: 2, title: "Creative & Personal", subtitle: "Showcase your portfolio and expand reach", video: "/videos/port.webm" ,poster:"/images/2.png"},
+  { id: 3, title: "E-Commerce", subtitle: "Sell anything, anywhere", video: "/videos/noctura.webm" ,poster:"/images/3.png"},
+  { id: 4, title: "Startup", subtitle: "Your Startup deserves the best presence", video: "/videos/ai_build.webm" ,poster:"/images/4.png"},
+  { id: 5, title: "SaaS & Web3 Software", subtitle: "", video: "/videos/saas.webm" ,poster:"/images/5.png"},
+  { id: 6, title: "Creative Agency", subtitle: "", video: "/videos/creative.webm" ,poster:"/images/6.png"},
 ];
 
 function ProjectCard({ project }) {
