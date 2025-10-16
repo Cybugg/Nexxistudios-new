@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import useThemeStore from '@/app/store/useThemeStore'
 
 gsap.registerPlugin(ScrollTrigger);
 import { pricingOverview } from '../utils/data';
@@ -10,7 +11,7 @@ import Link from 'next/link'
 
 function Pricing() {
   const scrollRef = useRef();
-    
+  const { darkMode, toggleDarkMode, setDarkMode } = useThemeStore()
     useGSAP(()=>{
         gsap.to("#heading-pricing",{
             opacity:1,
@@ -20,14 +21,18 @@ function Pricing() {
         trigger:"#heading-pricing",
           scrub:true,
           start:"bottom bottom",
-          end:"top 20%"
+          end:"top 20%",
+           onLeave:()=>setDarkMode(false),
+          onEnter:()=>setDarkMode(false),
+          onEnterBack:()=>setDarkMode(false),
+          onLeaveBack:()=>setDarkMode(false),
   }
         })
 
-    },[])
+    },[setDarkMode,darkMode])
   return (
-   <div className='flex flex-col py-[40px] w-full'>
-        <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium' id='heading-pricing' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Pricing</div>
+   <div className='flex flex-col py-[40px] w-full px-5 mx-auto md:px-[50px]  xl:px-[120px]'>
+        <div className='text-[51px] lg:text-[80px]  font-clashGrotesk-medium font-medium' id='heading-pricing' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Pricing</div>
         <div className='grid grid-cols-1 md:grid-cols-2  pb-8 gap-8'>
           {/* Elements */}
           {pricingOverview.map((ele,ind)=>(

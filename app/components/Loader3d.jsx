@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, Html, useProgress } from "@react-three/drei";
 import { Suspense, useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useFullProgress } from "./useFullProgress"; 
 
 function RingModel({ mouse }) {
   const { scene } = useGLTF("/models/loader.glb");
@@ -41,8 +42,14 @@ function ProgressBar() {
 
 export default function Loader3D({ onFinish }) {
   const mouse = useRef({ x: 0, y: 0 });
-  const { progress } = useProgress();
+  const progress = useFullProgress(); 
   const [show, setShow] = useState(true);
+
+  
+  // For debugging
+// useEffect(() => {
+//   console.log("Progress:", progress);
+// }, [progress]);
 
   // Fade out when loading completes
   useEffect(() => {

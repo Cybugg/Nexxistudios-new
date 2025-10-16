@@ -44,7 +44,7 @@ function Team() {
         })
     },[])
   return (
-    <div className='flex flex-col py-[40px] w-full min-h-screen'>
+    <div className='flex flex-col py-[40px] w-full min-h-screen px-5 mx-auto md:px-[50px]  xl:px-[120px]'>
 
       <div className='text-[51px] lg:text-[80px] opacity-0 font-clashGrotesk-medium font-medium ' id='heading-team' style={{scrollMarginTop:"120px"}} ref={scrollRef}>Meet the Team</div>  
         <div className='space-y-1.5 relative w-full xl:flex-row justify-center items-center flex flex-col gap-12'>
