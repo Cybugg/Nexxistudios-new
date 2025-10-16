@@ -217,8 +217,8 @@ window.addEventListener("resize", handleResize);
       {/* Video Scroll Section */}
       <section
         ref={containerRef}
-        className="relative w-full  mb-0 "
-        style={{ height: "350vh", backgroundColor: "black" }}
+        className="relative w-full  mb-0 h-0 lg:h-[350vh]"
+        style={{  backgroundColor: "black" }}
       >
         <canvas
           ref={canvasRef}
